@@ -1,15 +1,15 @@
-# node-red-contrib-got
+# node-red-contrib-got-sequenced
 
 [![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url] [![XO code style][codestyle-image]][codestyle-url]
 
-> A Node-RED [Got](https://github.com/sindresorhus/got) node, for simplified HTTP/HTTPS requests
+> A Node-RED [Got](https://github.com/sindresorhus/got) node, for simplified HTTP/HTTPS requests- sequenced version
 
 ## Installation
 
-Install `node-red-contrib-got` using [npm](https://www.npmjs.com/):
+Install `node-red-contrib-got-sequenced` using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install --save node-red-contrib-got
+npm install --save node-red-contrib-got-sequenced
 ```
 
 ## Usage
