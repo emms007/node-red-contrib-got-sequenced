@@ -2,7 +2,7 @@
 
 [![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url] [![XO code style][codestyle-image]][codestyle-url]
 
-> A Node-RED [Got](https://github.com/sindresorhus/got) node, for simplified HTTP/HTTPS requests- sequenced version
+> A Node-RED [Got](https://github.com/sindresorhus/got) node, for simplified HTTP/HTTPS requests- sequenced version, merged with simple-sequenced queue (https://github.com/shady2k/node-red-contrib-simple-message-queue)
 
 ## Installation
 
