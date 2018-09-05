@@ -2,7 +2,7 @@
   "name": "node-red-contrib-got-sequenced",
   "version": "1.0.0",
   "description": "A Node-RED Got node, for simplified HTTP/HTTPS requests - sequenced alternative ",
-  "main": "src/got.js",
+  "main": "src/got-sequence.js",
   "directories": {
     "test": "test"
   },
@@ -19,7 +19,8 @@
     "https",
     "get",
     "got",
-    "request"
+    "request",
+    "sequence"
   ],
   "author": {
     "name": "Joakim Carlstein",
@@ -30,7 +31,8 @@
   "bugs": {
     "url": "https://github.com/emms007/node-red-contrib-got-sequenced/node-red-contrib-got/issues"
   },
-  "homepage": "https://github.com/emms007/node-red-contrib-got-sequenced/node-red-contrib-got#readme",
+  "homepage":
+"https://github.com/emms007/node-red-contrib-got-sequenced/node-red-contrib-got#readme",
   "xo": {
     "envs": [
       "node"
@@ -38,7 +40,7 @@
   },
   "node-red": {
     "nodes": {
-      "got": "src/got.js"
+      "got-sequenced": "src/got-sequenced.js"
     }
   },
   "devDependencies": {
