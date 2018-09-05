@@ -1,42 +1,47 @@
 <script type="text/javascript">
-  RED.nodes.registerType('got',{
+  RED.nodes.registerType('got-sequenced',{
     category: 'function',
     color: '#28AFB0',
     defaults: {
       name: {
-				value: ''
-			},
-			timeout: {
-				value: 30 * 1000
-			}
+                                value: ''
+                        },
+                        timeout: {
+                                value: 30 * 1000
+                        },
+                        retries: {
+                                value: 5
+                        }
+
     },
     inputs: 1,
     outputs: 1,
     icon: 'white-globe.png',
     label: function() {
-      return this.name || 'got';
+      return this.name || 'got-sequenced';
     }
   });
-</script>
-
-<script type="text/x-red" data-template-name="got">
+</script> 
+<script type="text/x-red" data-template-name="got-sequenced">
   <div class="form-row">
     <label for="node-input-timeout"><i class="fa fa-hourglass-end"></i> Timeout (ms)</label>
     <input type="text" id="node-input-timeout" placeholder="30000">
   </div>
   <div class="form-row">
+    <label for="node-input-retries"><i class="fa fa-hourglass-end"></i> Connection retry count</label>
+    <input type="text" id="node-input-retries" placeholder="5">
+  </div>
+  <div class="form-row">
     <label for="node-input-name"><i class="icon-tag"></i> Name</label>
     <input type="text" id="node-input-name" placeholder="Name">
-  </div>
-</script>
-
-<script type="text/x-red" data-help-name="got">
+  </div> </script> 
+  <script type="text/x-red" data-help-name="got-sequenced">
   <p>
-		A <a href="https://github.com/sindresorhus/got">Got</a> HTTP request node.
-	</p>
-	<p>
-		The input message&rsquo;s <code>url</code> property will be used as url for the HTTP request.
-		<code>payload</code> will be used as <code>body</code> for the request and all other properties on
-		the input message will be used as <a href="https://github.com/sindresorhus/got#options"><code>options</code></a>.
-	</p>
-</script>
+                A <a href="https://github.com/sindresorhus/got">Got</a> HTTP request node.
+  </p>
+  <p>
+			The input message&rsquo;s <code>url</code> property will be used as url for the HTTP request.
+			<code>payload</code> will be used as <code>body</code> for the request and all other properties on the input message will be used as <a href="https://github.com/sindresorhus/got#options"><code>options</code></a>.
+  </p> 
+  </script>
+
