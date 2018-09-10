@@ -8,7 +8,7 @@ module.exports = exports = function (RED) {
 		this.name = config.name;
 		var node = this;
 		
-		const timeout = config.timeout || 30 * 1000;
+		const timeout = parseInt(config.timeout) || 30 * 1000;
 
 		this.on('input', msg => {
 			
