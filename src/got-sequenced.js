@@ -8,8 +8,9 @@ module.exports = exports = function (RED) {
 		this.name = config.name;
 		var node = this;
 		
-		const timeout = parseInt(config.timeout) || 30 * 1000;
-
+		const timeout = parseInt(config.timeout) || 30 * 1000;	
+		const retries = parseInt(config.retries) || 5;
+		
 		this.on('input', msg => {
 			
 			// QUEUE MANAGEMENT
@@ -48,7 +49,7 @@ module.exports = exports = function (RED) {
 				context.run_status='Q:'+context.queue.length+'|'+'Requesting';
 				
 				const body = msg.payload;
-				const opts = Object.assign({timeout, body}, msg);
+				const opts = Object.assign({timeout, body, retries}, msg);
 				delete opts.url;
 				delete opts.payload;
 				got(msg.url, opts)
@@ -76,8 +77,7 @@ module.exports = exports = function (RED) {
 								statusCode: err.statusCode,
 								statusMessage: err.statusMessage,
 								payload: err.message
-							}));
-							return;
+							}));							
 						}
 						// Update node status
 						node.status({fill: 'red', shape: 'dot', text: 'Q:'+context.queue.length+'|Waiting:'+err.message});
