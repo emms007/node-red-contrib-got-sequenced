@@ -71,8 +71,8 @@ module.exports = exports = function (RED) {
 					})
 					.catch(err => {
 						if (err.statusCode) {
-							this.status({});
-							this.send(Object.assign({}, msg, {
+							node.status({});
+							node.send(Object.assign({}, msg, {
 								headers: {},
 								statusCode: err.statusCode,
 								statusMessage: err.statusMessage,
@@ -87,7 +87,7 @@ module.exports = exports = function (RED) {
 						// Self call again, for more msg processing
 						process_msg(context,node);
 
-						node.error(err, msg);
+						node.error(err, (err.statusCode+':'+err.statusMessage || 'KO'));
 					});
 			};
 			
