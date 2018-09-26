@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-got-sequenced",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Node-RED Got node, for simplified HTTP/HTTPS requests - sequenced alternative ",
   "main": "src/got-sequence.js",
   "directories": {
